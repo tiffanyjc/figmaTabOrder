@@ -1,13 +1,13 @@
-
-
 var numTabs = 0; 
 var tabs = []; 
 var selectedObj = DebuggingHelpers.logSelected(); 
 
 // if a node is selected, it will add the node name and ID to the tab table 
-function addTab() {
+var add = function addTab() {
+    console.log('hi');  
     selectedObj = DebuggingHelpers.logSelected(); 
     if (selectedObj == null) {
+        console.log('No object selected'); 
         return; 
     }
 
@@ -45,4 +45,4 @@ function addTab() {
     console.log(tabs); 
 }
 
-window.onclick = addTab(); 
+window.onclick = add; 
