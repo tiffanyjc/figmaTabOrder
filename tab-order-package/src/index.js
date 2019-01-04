@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/main.css';
 import * as serviceWorker from './serviceWorker';
 
 var numRows = 0; 

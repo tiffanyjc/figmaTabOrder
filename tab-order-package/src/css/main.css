@@ -65,8 +65,7 @@ code {
   height: 25px; 
   margin-right: 25px; 
   /* align-self: center;  */
-  
-  background-image: url('assets/dragIcon.svg'); 
+  background-image: url('../assets/dragIcon.svg'); 
   background-repeat: no-repeat; 
   background-position: center; 
 
