@@ -1,15 +1,28 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "manifest_version": 2,
+
+  "name": "Figma Tab Order Annotation",
+  "description": "An extension to create tab order annotation in Figma",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+  },
+
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": [
+      "https://www.figma.com/file/*",
+      "http://www.figma.com/file/*",
+      "https://www.figma.com/files/*",
+      "http://www.figma.com/files/*"
+    ],
+    "all_frames": true,
+    "css": ["js/contentScript.js"]
+    // "js": ["src/index.js"]
+
+  }],
+
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
 }

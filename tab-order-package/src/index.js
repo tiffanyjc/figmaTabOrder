@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App'; 
 import * as serviceWorker from './serviceWorker';
 
 var numRows = 0; 
 
 function PanelHeader(props) {
     return (
-        <div className="panelHeader">
+        <div className="panelHeader">       
             {props.value}
             <button onClick={(e) => props.parent.addTab()}>Add</button>
         </div>
@@ -101,6 +100,7 @@ class PluginPanel extends React.Component {
 
 ReactDOM.render(<PluginPanel />, document.getElementById('root'));
 
+// ReactDOM.render(<App />, document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
